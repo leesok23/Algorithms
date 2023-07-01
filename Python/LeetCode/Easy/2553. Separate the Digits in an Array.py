@@ -1,6 +1,7 @@
 class Solution:
     def separateDigits(self, nums: List[int]) -> List[int]:
-        result = ''
+        result = []
         for num in nums:
-            result += str(num)
-        return [int(x) for x in result]
+            temp = [int(x) for x in str(num)]
+            result += temp
+        return result
