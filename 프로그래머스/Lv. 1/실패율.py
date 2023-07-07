@@ -1,5 +1,16 @@
 # Version 1
-
+def solution(N, stages):
+    result = {}
+    players = len(stages)
+    for stage in range(1,N+1):
+        if players > 0:
+            count = stages.count(stage)
+            result[stage] = count / players
+            players -= count
+        else:
+            result[stage] = 0
+    
+    return sorted(result, key=lambda x: result[x], reverse=True)
 
 
 # Version 2 (works but runs time error)
