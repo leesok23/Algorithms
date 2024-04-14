@@ -9,7 +9,8 @@ def solution(n):
     if num**2 == n:
         answer += num
     return answer
-    
+
+
 # Version 2
 def solution(n):
     answer = 0
