@@ -1,4 +1,4 @@
--- Version 1
+# Version 1
 def solution(n):
     answer = 0
     num = 1
@@ -10,7 +10,7 @@ def solution(n):
         answer += num
     return answer
     
--- Version 2
+# Version 2
 def solution(n):
     answer = 0
     for i in range(1,int(n**0.5)+1):
