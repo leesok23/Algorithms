@@ -8,6 +8,7 @@ def solution(a, b):
         a += 1
     return answer
 
+
 # Version 2
 def solution(a, b):
     if a > b:
