@@ -1,3 +1,4 @@
+# Version 1
 def solution(n):
     # 10진법 > 3진법
     temp = ''
