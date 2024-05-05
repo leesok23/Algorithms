@@ -1,9 +1,8 @@
 def solution(sizes):
-    max1, max2 = 0, 0
-    for size in sizes:
-        if size[0] < size[1]:
-            size[0], size[1] = size[1], size[0]
-        max1 = max(max1, size[0])
-        max2 = max(max2, size[1])
-        
-    return max1 * max2
+    row, col = 0, 0
+    for a, b in sizes:
+        if b > a:
+            a, b = b, a
+        row = max(a,row)
+        col = max(b,col)
+    return row * col
