@@ -1,11 +1,10 @@
 def solution(s):
-    dict_s = {}
+    words = {}
     answer = []
     for i in range(len(s)):
-        if s[i] not in dict_s:
-            dict_s[s[i]] = i
+        if s[i] not in words:
             answer.append(-1)
         else:
-            answer.append(i - dict_s[s[i]])
-            dict_s[s[i]] = i
+            answer.append(i-words[s[i]])
+        words[s[i]] = i
     return answer
