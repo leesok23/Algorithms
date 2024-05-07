@@ -1,13 +1,10 @@
 def solution(k, score):
     answer = []
-    temp = []
+    tmp = []
     for i in range(len(score)):
-        if i < k:
-            temp.append(score[i])
-        elif i >= k and score[i] > temp[-1]:
-            temp.pop()
-            temp.append(score[i])
-        temp.sort(reverse=True)
-        answer.append(temp[-1])
-            
+        tmp.append(score[i])
+        tmp.sort()
+        if len(tmp) > k:
+            tmp.pop(0)
+        answer.append(tmp[0])
     return answer
